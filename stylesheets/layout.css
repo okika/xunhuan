@@ -1,0 +1,385 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	
+	#Typography baselines corrections
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+
+/* #Typography baseline corrections
+================================================== */
+
+	h1 { line-height: 49px; margin-bottom: 14px;}
+	h2 { line-height: 42px; margin-bottom: 7px; }
+	h3 { line-height: 35px; margin-bottom: 7px; }
+	h4 { line-height: 28px; margin-bottom: 7px; }
+	h5 { line-height: 21px; }
+
+	p { margin: 0 0 21px 0; }
+	p.lead { line-height: 28px; }
+
+
+/*	Blockquotes  */
+	blockquote, blockquote p { line-height: 21px;}
+	blockquote { margin: 0 0 21px; padding: 7px 20px 0 19px; }
+
+	hr { margin: 14px 0 28px;}
+
+/* #Lists (baseline corrections)
+================================================== */
+	ul, ol { margin-bottom: 21px; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 7px 0 7px 30px; }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 7px; }
+	li { line-height: 21px; margin-bottom: 14px; }
+
+/* #Site Styles
+================================================== */
+
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	}
+
+img {
+	max-width: 100%;
+}
+
+.footer {
+	margin-top: 28px;
+}
+
+.band.header {
+	background-image: url(../images/headerimg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+
+	background-size: cover;
+
+	padding: 0;	
+}
+
+.band.footer {
+	background: #C2C0BF;
+	padding: 0;
+}
+
+.band.footer p{
+	padding: 28px 0 28px 0; 
+	text-align: center;
+}
+
+.band.container.main {
+	background: rgba(0,0,0,.05);
+	padding: 21px;
+}
+
+/*heading*/
+header.main {
+	padding: 35px 0;
+}
+
+header h1.logo {
+	margin: 7px 0 0 0;
+	float: left;
+}
+
+header h1.logo a {
+	display: block;
+	text-decoration: none;
+	color: white;
+
+}
+
+header img.seal {
+	width: 150px;
+	height: 150px;
+	float: right;
+}
+
+header h4 {
+	display: block;
+	margin: 7px 0 0 0;
+	float: left;
+}
+
+
+header div.phd {
+	float: left;
+}
+
+.header {
+	color: white;
+}
+
+/*mit and aeroastro logos*/
+h4.aeroastro {
+	margin: 0;
+	float: left;
+}
+
+h4.mitlogo {
+	margin: 0;
+	float: left;
+}
+
+h4.mitlogo a {
+	width: 150px;
+	height: 103px;
+	display: block;
+	background: url(../images/mitlogo2.png) no-repeat 0 0;
+
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+h4.aeroastro a {
+	width: 349px;
+	height: 64px;
+	display: block;
+	background: url(../images/aeroastro.png) no-repeat 0 0;
+
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+.linkedin {
+	width: 250px;
+	height: 43px;
+	display: block;
+	background: url(../images/linkedin.png) no-repeat 0 0;
+
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+.logos {
+	margin-right: 35px;
+}
+
+.logos ul {
+	margin: 0;
+}
+
+.connect ul {
+	list-style: none;
+}
+
+/*navigation*/
+nav.primary ul,
+nav.primary ul li {
+	margin: 0;
+}
+
+nav.primary ul {
+	text-align: center;
+	position: relative;
+}
+
+nav.primary select {
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	margin: 25px auto;
+	color: #000;
+	font-family: Helvetica;
+	font-size: 14px;
+	text-align: center;
+	background: rgba(0,0,0,.25);
+	border: #333;
+	border-radius: 0%;
+	cursor: pointer;
+}
+
+nav.primary ul li {
+	display: inline;
+	float: left;
+	position: relative;
+}
+
+nav.primary ul li a {
+	display: inline-block;
+	line-height: 49px;
+	padding:  0 14px;
+	color: #8A8B8C;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 0.08em;
+}
+
+nav.primary ul li a:hover {
+	background: #424242;
+	cursor: pointer;
+}
+
+/*MAIN CONTENT*/
+.band.main-content {
+	margin-top: 21px;
+}
+
+.infoimage {
+    position:relative;
+    width: 100%; /*for IE6*/
+}
+.infoimage .text {
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom: 5px;
+    width:200px;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+}
+
+.infoimage .text p{
+	margin-left: 5px;
+	padding-top: 10px
+}
+
+div.advisor{
+	padding-left: 5px;
+	padding-bottom: 18px;
+	padding-top: 5px;
+	padding-right:5px;
+	width: 100%;
+	height: 100%;
+	background: #c3c3c3;
+}
+
+.container.main.about {
+	margin-top: 28px;
+	margin-bottom: 28px;
+}
+
+div.research {
+	margin-top: 28px;
+	margin-bottom: 28px; 
+}
+
+.inforesearchimage {
+    position:relative;
+    width: 100%; /*for IE6*/
+}
+.inforesearchimage .text {
+    position:absolute;
+    right:0px;
+    left: 0px;
+    bottom: 5px;
+    width:100%;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+}
+
+.inforesearchimage .text p{
+	margin-left: 5px;
+	padding-top: 10px
+}
+
+.journal {
+	margin-top: 28px;
+}
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+
+		header img.seal {
+			height:100px;
+			width: 100px;
+		}
+
+		div.advisor p.gone {
+			display: none;
+		}
+
+		div.advisor {
+			padding-bottom: 6px;
+		}
+
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+		nav.primary select {
+			display: block;
+		}
+
+		nav.primary ul {
+			display: none;
+		}
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		nav.primary select {
+			display: block;
+		}
+
+		nav.primary ul {
+			display: none;
+		}
+	}
+
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		header img.seal {
+			display: none;
+		}
+	}
+
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		header img.seal {
+			display: none;
+		}
+	}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/

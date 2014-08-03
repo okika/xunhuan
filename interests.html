@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Xun Huan</title>
+	<meta name="description" content="Xuan Huan is a Ph.D. candidate at the Massachusetts Insitutue of Technology, Aeronautic and Astronautic department. ">
+	<meta name="author" content="Xun Huan">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<!--jquery-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div class="page">
+		<div class="band header">
+			<header class="container main">
+				<div class="left eight columns">
+					<div>
+						<h1 class="logo"><a href="http://web.mit.edu/xunhuan/www">Ryan Xun Huan</a></h1>
+					</div>
+					<div>
+						<h4 class="header">Ph.D. Candidate, MIT</h4>
+					</div>
+				</div>
+				<div class="right">
+					<div class="eight columns seal">
+						<img class="seal" src="images/MIT_Seal.png">
+					</div>
+				</div>
+			</header> <!--end header here-->
+		</div>	<!--end band-->
+		<div class="band navigation">
+			<nav class="container primary">
+				<div class="sixteen columns">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="http://web.mit.edu/xunhuan/www/HuanCV.pdf">Curriculum Vitae</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="publications.html">Publications</a></li>
+						<li><a href="courses.html">Courses Taken</a></li>
+						<li><a href="interests.html">Interests</a></li>
+					</ul>
+				</div>
+			</nav> <!--end container-->
+		</div> <!--end band-->
+		<div class="container">
+		  	<div class="sixteen columns">
+				  <h1 class="title">Interests</h1>
+				  <ul>
+				    
+				    <li> <b>Management consulting:</b> Solving business cases is a lot
+				    of fun. I particularly enjoyed the McKinsey Insight Engineering
+				    and Science, and Bridge to BCG programs in the summer of
+				    2013. </li> <br>
+
+				    <li> <b>Entrepreneurship and start-ups:</b> Start-ups provide the
+				    opportunity for creativity, quick impact results, and roller
+				    coaster excitement! I helped organize the <a
+				    href="http://mit100k.org">MIT $100K Entrepreneurship
+				    Competition</a> in 2011-12, and it was an amazing experience. </li>
+				    <br>
+				    
+				    <li> <b>Ice skating and ice hockey:</b> I just absolutely love
+				    skating. I am part of the Aero-Astro intramural hockey team, and
+				    skate regularly at the <a
+				    href="http://web.mit.edu/athletics/www/skate.htm">MIT rink</a>
+				    when it is open.  </li>
+				    <br>
+				    
+				    <li> <b>Sports:</b> I like a variety of sports, including running
+				    (usually ~5k), softball, badminton, table tennis, or just doing
+				    some weights at the gym.</li>
+				  </ul>
+			</div>
+		</div>	
+		<div class="band footer">
+			<footer class="container main">
+				<div class="sixteen columns">
+					<p>&copy; 2014 Ryan Xun Huan</p>
+				</div>
+			</footer> <!--end container-->
+		</div> <!--end band-->
+
+	</div>
+
+	</div><!-- container -->
+	<!--============================================================-->
+	<script src="js/waypoints.min.js"></script>
+
+	<!--chris's little dropdown-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+				//buildingdropdown
+				$("<select />").appendTo("nav.primary");
+
+				//Create default option
+				$("<option />", {
+					"selected": "selected",
+					"select"   : "",
+					"text"    : "MENU"
+				}).appendTo("nav select");
+
+				//populate dropdowns with menu items
+				$("nav li a").each(function() {
+					var el = $(this);
+					$("<option />", {
+						"value"   : el.attr("href"),
+						"text"    : el.text()
+					}).appendTo("nav select");
+				});
+
+				//make the dropdown links active
+				$("nav select").change(function() {
+					window.location = $(this).find("option:selected").val();
+				});
+		});
+	</script>
+
+	<script>
+	$(function() {                  <!--When the page has loaded,-->
+  		
+		var band_navigation = $(".band-navigation");
+		var nav = $("nav");
+
+		band_navigation.waypoint({
+			handler: function(direction) {
+				nav.toggleClass('sticky', direction=='down');
+
+				if (direction == 'down')
+  					band_navigation.css({ 'height':nav.outerHeight() });
+				else
+  					band_navigation.css({ 'height':'auto' });
+			}
+		});
+
+	});
+	</script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
